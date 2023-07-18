@@ -13,7 +13,6 @@ btnStart.addEventListener('click', beginCountStart)
 
 btnStart.disabled = true;
 const currentDate = new Date();
-let selectedDate = null;
 let timeDifference = null;
 let countDownInterval = null;
 
