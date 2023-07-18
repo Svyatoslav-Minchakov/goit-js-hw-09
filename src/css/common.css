@@ -16,3 +16,40 @@ img {
   display: block;
   max-width: 100%;
 }
+
+.svg {
+  width: 10px;
+  height: 10px;
+}
+
+.timer {
+  padding: 100px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.value {
+display: block;
+text-align: center;
+font-size: 50;
+}
+
+.label {
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+input {
+  height: 40px;
+  font-size: 18px;
+  text-align: center;
+}
+
+button {
+  height: 40px;
+  width: 80px;
+  font-size: 18px;
+  cursor: pointer;
+}
