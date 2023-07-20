@@ -50,7 +50,7 @@ function beginCountDown() {
     
     if (days === 0 && hours === 0 && minutes === 0 && seconds === 0) {
         clearInterval(countDownInterval)
-        alert('FINISH')
+        Notiflix.Report.info('FINISH');
     } else {timeDifference -= 1000}
 }
 
