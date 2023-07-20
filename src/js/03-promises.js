@@ -1,4 +1,4 @@
-
+import Notiflix from 'notiflix';
 
 const pageForm = document.querySelector('.form');
 pageForm.addEventListener('submit', generatePromises);
@@ -33,9 +33,11 @@ function generatePromises(event) {
     createPromise(currentPromise, delay)
       .then((position) => {
         console.log(`✅ Виконано ${position} через ${step}мс`);
+        Notiflix.Notify.success(`✅ Виконано ${position} через ${step}мс`);
       })
       .catch((position) => {
         console.log(`❌ Відхилено ${position} через ${step}мс`);
+        Notiflix.Notify.failure(`❌ Відхилено ${position} через ${step}мс`);
       });
 
     currentPromise += 1;

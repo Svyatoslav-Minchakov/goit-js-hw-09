@@ -47,7 +47,8 @@ input {
   text-align: center;
 }
 
-[data-start] {
+[data-start],
+[data-stop] {
   height: 40px;
   width: 80px;
   font-size: 18px;
