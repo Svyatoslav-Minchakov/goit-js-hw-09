@@ -30,6 +30,24 @@ function generatePromises(event) {
       return;
     }
 
+    if (delay === 0 || step === 0) {
+      Notiflix.Report.failure('Затримка повинна бути більше нуля!');
+      clearInterval(intervalId);
+      document.querySelector('input[name="delay"]').value = '';
+      document.querySelector('input[name="step"]').value = '';
+      document.querySelector('input[name="amount"]').value = '';
+      return
+    }
+
+    if (delay < 0 || step < 0) {
+      Notiflix.Report.failure('Затримка не повинна бути від\'ємною');
+      clearInterval(intervalId);
+      document.querySelector('input[name="delay"]').value = '';
+      document.querySelector('input[name="step"]').value = '';
+      document.querySelector('input[name="amount"]').value = '';
+      return
+    }
+
     createPromise(currentPromise, delay)
       .then((position) => {
         console.log(`✅ Виконано ${position} через ${step}мс`);

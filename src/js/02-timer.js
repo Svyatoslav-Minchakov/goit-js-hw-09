@@ -5,14 +5,17 @@ import Notiflix from 'notiflix';
 
 const inputDate = document.querySelector('#datetime-picker');
 const btnStart = document.querySelector('[data-start]');
+const btnReset = document.querySelector('[data-reset]');
 const countDounDays = document.querySelector('[data-days]');
 const countDounHours = document.querySelector('[data-hours]');
 const countDounMinutes = document.querySelector('[data-minutes]');
 const countDounSeconds = document.querySelector('[data-seconds]');
 
-btnStart.addEventListener('click', beginCountStart)
+btnStart.addEventListener('click', beginCountStart);
+btnReset.addEventListener('click', clearCountDownValue);
 
 btnStart.disabled = true;
+btnReset.disabled = true;
 const currentDate = new Date();
 let timeDifference = null;
 let countDownInterval = null;
@@ -55,7 +58,14 @@ function beginCountDown() {
 }
 
 function beginCountStart() {
-   countDownInterval = setInterval(beginCountDown, 1000)
+    countDownInterval = setInterval(beginCountDown, 1000);
+    inputDate.disabled = true;
+    btnStart.disabled = true;
+    btnReset.disabled = false;
+}
+
+function clearCountDownValue() {
+    location.reload();
 }
 
 

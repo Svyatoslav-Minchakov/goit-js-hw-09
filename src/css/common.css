@@ -48,7 +48,8 @@ input {
 }
 
 [data-start],
-[data-stop] {
+[data-stop],
+[data-reset] {
   height: 40px;
   width: 80px;
   font-size: 18px;
